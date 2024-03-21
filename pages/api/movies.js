@@ -1,19 +1,15 @@
 // pages/api/movies.js
 
-/** 
-* @swagger 
-* /api/movies: 
-*   
-get: 
-*     
-description: Returns movies 
-responses: 
-200: 
-description: Hello Movies 
-*     
-*       
-*         
-*/
+/**
+ * @swagger
+ * /api/movies:
+ *   get:
+ *     summary: Récupérer tous les films
+ *     responses:
+ *       200:
+ *         description: Une liste de films.
+ */
+
 
 import clientPromise from "../../lib/mongodb"; 
 
