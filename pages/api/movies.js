@@ -1,4 +1,20 @@
 // pages/api/movies.js
+
+/** 
+* @swagger 
+* /api/movies: 
+*   
+get: 
+*     
+description: Returns movies 
+responses: 
+200: 
+description: Hello Movies 
+*     
+*       
+*         
+*/
+
 import clientPromise from "../../lib/mongodb"; 
 
 export default async function handler(req, res) {
