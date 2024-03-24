@@ -1,3 +1,7 @@
+# Rendu Atelier
+
+Voici mon rendu de l'atelier Dev Service Cloud, utilisant diverses technologies comme présentées ci-dessous :
+
 # 🎬 MFLIX API
 
 Le projet MFLIX est une API RESTful conçue pour fournir des informations cinématographiques, similaire à Allociné. Cette API permet de récupérer des données sur les films et les commentaires associés, offrant une expérience riche pour les utilisateurs de la plateforme.
