@@ -1,7 +1,14 @@
 /**
  * @swagger
+ * tags:
+ *   - name: Commentaires
+ *     description: API pour les opérations sur les commentaires.
+ */
+/**
+ * @swagger
  * /api/movie/comments:
  *   get:
+ *     tags: [Commentaires]
  *     summary: Récupérer la liste de tous les commentaires liés à un film
  *     responses:
  *       200:

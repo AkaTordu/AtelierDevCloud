@@ -1,15 +1,20 @@
 // pages/api/movies.js
-
+/**
+ * @swagger
+ * tags:
+ *   - name: Films
+ *     description: API pour les opérations sur les films.
+ */
 /**
  * @swagger
  * /api/movies:
  *   get:
+ *     tags: [Films]
  *     summary: Récupérer tous les films
  *     responses:
  *       200:
  *         description: Une liste de films.
  */
-
 
 import clientPromise from "../../lib/mongodb"; 
 

@@ -89,12 +89,19 @@ export default async function handler(req, res) {
         res.status(500).json({ error: error.message });
       }
       break;
-    case "POST":
-      // En général, on n'utilise pas POST pour un id spécifique - envisagez de le déplacer vers un autre endpoint si nécessaire
-      break;
+      case 'POST':
+        try {
+            const { movieId, text } = req.body; 
+            const newComment = { movieId: new ObjectId(movieId), text, date: new Date() };
+            const result = await db.collection('comments').insertOne(newComment);
+            res.status(201).json({ message: 'Comment added', data: result.ops[0] });
+        } catch (error) {
+            res.status(500).json({ error: error.message });
+        }
+        break;
     case "PUT":
       try {
-        const { text } = req.body; // Assurez-vous que le corps de la requête contient les champs nécessaires à la mise à jour
+        const { text } = req.body; 
         const result = await collection.updateOne(
           { _id: new ObjectId(idComment) },
           { $set: { text: text } }
